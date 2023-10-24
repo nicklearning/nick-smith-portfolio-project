@@ -2,6 +2,7 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
+
 }
 
 /* Set the header as a flex container to contain two flex items: the .profile section and the nav. Aligned the items to the center.*/
@@ -74,14 +75,20 @@ nav a {
 main {
     display: flex;
     margin-right: 30px;
-    margin-left: 30px;
     flex-wrap: wrap;
+    border: 10px solid red;
 }
 
 .left-side {
     width: 30%;
     margin-top: 100px;
     text-align: right;
+}
+
+.left-side h2 {
+    color: rgba(1, 13, 105);
+    font-size: 3rem;
+    padding-right: 30px;
 }
 
 .right-side {
@@ -95,11 +102,6 @@ main {
     font-size: 1.5rem;
 }
 
-.left-side h2 {
-    color: rgba(1, 13, 105);
-    font-size: 3rem;
-    padding-right: 30px;
-}
 
 .project-gallery {
     display: flex;
@@ -107,35 +109,71 @@ main {
     justify-content: space-between;
 }
 
+.project-card-1 {
+    position: relative;
+}
+
 #first-project-img {
     width: 100%;
     height: auto;
+    border: 5px solid rgba(1, 13, 105);
+}
+
+.project-card1-text {
+    position: absolute;
+    top: 59%;
+    left: .25vw;
+    color: #fff;
+    background-color: rgba(1, 13, 105);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.project-card1-text h4,
+h5 {
+    font-size: 1.22vw;
 }
 
 .project-card {
     position: relative;
+    border: 5px solid rgba(1, 13, 105);
+    width: 49%;
+}
+
+.project-card img {
+    width: 100%;
+    
 }
 
 .project-text {
     position: absolute;
-    top: 60%;
-    left: 2%;
+    top: 59%;
+    left: .25vw;
     color: #fff;
-    background-color: gray;
-    width: 25%;
+    background-color: rgba(1, 13, 105);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
-.project-text h4 {
-    font-size: 26px;
+.project-text h4,
+h5 {
+    font-size: 1.22vw;
 }
+
+
 
 @media (max-width: 630px) {
 
     .profile,
     header,
-    main {
+    main,
+    .project-gallery {
         flex-direction: column;
+    }
 
+    main {
+        margin-right: 30px;
+        margin-left: 30px;
     }
 
     .left-side {
@@ -149,5 +187,10 @@ main {
         width: 100%;
         border-left: none;
         margin-top: 20px;
+
+    }
+
+    .project-gallery .project-card {
+        width: 100%;
     }
 }
