@@ -1,3 +1,73 @@
 * {
     box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
 }
+
+/* Set the header as a flex container to contain two flex items: the .profile section and the nav. Aligned the items to the center.*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(5, 32, 237, 0.861);
+    flex-wrap: wrap;
+    padding: 10px 0px 20px 0px;
+}
+
+/* Set the profile class as a flex container and align the items to the center. */
+.profile {
+    display: flex;
+    max-width: 550px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(1, 13, 105, 0.641);
+    color:  rgb(255, 255, 255);
+    padding: 10px 20px 10px 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* Increased the h1 font size and gave it some space from the image. */
+.profile h1 {
+    font-size: 2.6rem;
+    margin-left: 30px;
+}
+
+/* Crop the profile image */
+.profile img {
+    border-radius: 100px;
+}
+
+/*  */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px 0 20px;
+}
+
+nav a {
+    font-size: 1.5rem;
+    margin: 0 20px;
+    color: white;
+}
+
+.hero {
+    background-color: brown;
+    background-image: url(/assets/images/background-3);
+    padding: 50px 0px;
+
+}
+
+.hero h3 {
+    background-color:rgba(1, 13, 105, 0.797);
+    color: white;
+    width: fit-content;
+    float: right;
+    font-size: 1.5rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+} 
+
+@media (){}
