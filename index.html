@@ -15,10 +15,10 @@
             <h1>Nick Smith</h1>
         </section>
         <nav>
-            <a href="#">About Me</a>
-            <a href="#">Work</a>
-            <a href="#">Contact Me</a>
-            <a href="#">Resume</a>
+            <a href="#about-me">About Me</a>
+            <a href="#work">Work</a>
+            <a href="#contact-me">Contact Me</a>
+            <a href="#" style="display: none;">Resume</a>
         </nav>
     </header>
     <section class="hero">
@@ -27,7 +27,7 @@
 
     <main>
         <section class="left-side">
-            <h2>About <br> Me</h2>
+            <h2 id="about-me">About<br>Me</h2>
         </section>
         <section class="right-side">
             <p>I am a detail oriented Web Developer from Scottsdale, Arizona with endless curiosity and discipline. I
@@ -37,12 +37,14 @@
                 Want to work together? I'd love to hear from you.</p>
         </section>
         <section class="left-side">
-            <h2>Work</h2>
+            <h2 id="work">Work</h2>
         </section>
         <section class="right-side">
             <section class="project-gallery">
                 <section class="project-card-1">
-                    <img id="first-project-img" src="./assets/images/module01 project.PNG" alt="">
+                    <a href="https://nicklearning.github.io/horiseon-marketing-website/" target="_blank">
+                        <img id="first-project-img" src="./assets/images/module01 project.PNG" alt="">
+                    </a>
                     <section class="project-card1-text">
                         <h4>Horiseon Code Refactor</h4>
                         <h5>HTML and CSS</h5>
@@ -79,13 +81,13 @@
             </section>
         </section>
         <section class="left-side">
-            <h2>Contact <br>Me</h2>
+            <h2 id="contact-me">Contact<br>Me</h2>
         </section>
         <section class="right-side">
             <section class="contact-section">
-            <a href="#">480-544-3595</a>
-            <a href="#">nick@email.com</a>
-            <a href="#">Github</a>
+                <a href="#">480-544-3595</a>
+                <a href="#">nick@email.com</a>
+                <a href="#">Github</a>
             </section>
         </section>
 

@@ -1,3 +1,10 @@
+:root {
+    --navy: rgba(1, 13, 105);
+    --common-border-radius: 20px;
+    --common-box-shadow: 10px 5px 5px rgb(113, 112, 112);
+}
+
+
 * {
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -22,11 +29,11 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-color: rgba(1, 13, 105, 0.641);
+    background-color: var(--navy);
     color: rgb(255, 255, 255);
     padding: 10px 20px 10px 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-top-right-radius: var(--common-border-radius);
+    border-bottom-right-radius: var(--common-border-radius);
 }
 
 /* Increased the h1 font size and gave it some space from the image. */
@@ -40,7 +47,7 @@ header {
     border-radius: 100px;
 }
 
-/*  */
+
 nav {
     display: flex;
     justify-content: center;
@@ -52,11 +59,20 @@ nav a {
     font-size: 1.5rem;
     margin: 0 20px;
     color: white;
+    font-weight: 500;
+    text-decoration-thickness: .2rem;
+    text-underline-offset: .6rem;
+    padding-bottom: 1px;
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--navy);
 }
 
 .hero {
     display: flex;
-    background-color: brown;
+    background-color: rgb(42, 99, 165);
     background-image: url(/assets/images/background-3);
     padding: 50px 0px 10px;
     justify-content: flex-end;
@@ -64,7 +80,7 @@ nav a {
 }
 
 .hero h3 {
-    background-color: rgba(1, 13, 105, 0.797);
+    background-color: var(--navy);
     color: white;
     font-size: 1.5rem;
     border-top-left-radius: 10px;
@@ -88,7 +104,7 @@ main {
 }
 
 .left-side h2 {
-    color: rgba(1, 13, 105);
+    color: var(--navy);
     font-size: 3rem;
     padding-right: 30px;
 }
@@ -97,7 +113,7 @@ main {
     width: 70%;
     margin-top: 100px;
     padding-left: 25px;
-    border-left: 5px solid rgba(1, 13, 105);
+    border-left: 5px solid var(--navy);
 }
 
 .right-side p {
@@ -115,10 +131,11 @@ main {
     position: relative;
 }
 
+
+
 #first-project-img {
     width: 100%;
     height: auto;
-    border: 5px solid rgba(1, 13, 105);
 }
 
 .project-card1-text {
@@ -126,9 +143,9 @@ main {
     top: 59%;
     left: .25vw;
     color: #fff;
-    background-color: rgba(1, 13, 105);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    background-color: var(--navy);
+    border-top-right-radius: var(--common-border-radius);
+    border-bottom-right-radius: var(--common-border-radius);
 }
 
 .project-card1-text h4,
@@ -138,13 +155,17 @@ h5 {
 
 .project-card {
     position: relative;
-    border: 5px solid rgba(1, 13, 105);
     width: 49%;
+    margin: 5px 0px;
+}
+
+.project-card:hover,
+#first-project-img:hover {
+    box-shadow: var(--common-box-shadow)
 }
 
 .project-card img {
     width: 100%;
-    
 }
 
 .project-text {
@@ -152,9 +173,9 @@ h5 {
     top: 59%;
     left: .25vw;
     color: #fff;
-    background-color: rgba(1, 13, 105);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    background-color: var(--navy);
+    border-top-right-radius: var(--common-border-radius);
+    border-bottom-right-radius: var(--common-border-radius);
 }
 
 .project-text h4,
@@ -166,21 +187,31 @@ h5 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* border: 2px solid green; */
     padding-top: 50px;
     font-size: 1.5rem;
 
 }
 
 .contact-section a {
-    color: rgba(1, 13, 105);
+    color: var(--navy);
     font-weight: 900;
+    text-decoration-thickness: .2rem;
+    text-underline-offset: .6rem;
+    padding-bottom: 1px;
+}
+
+.contact-section a:hover {
+    color: white;
+    font-weight: 900;
+    background-color: var(--navy);
+    box-shadow: var(--common-box-shadow)
 }
 
 
 
-@media (max-width: 630px) {
+@media (max-width: 750px) {
 
+    .contact-section,
     .profile,
     header,
     main,
@@ -195,19 +226,38 @@ h5 {
 
     .left-side {
         width: 100%;
-        float: none;
         margin-top: 20px;
         text-align: center;
+        padding-right: 0px;
+    }
+
+    .left-side h2 {
+        padding-right: 0px;
+    }
+
+    .left-side h2 br {
+        display: none;
     }
 
     .right-side {
         width: 100%;
         border-left: none;
         margin-top: 20px;
-
+        padding-left: 0px;
+        border-top: 5px solid var(--navy);
+        padding-top: 20px;
     }
 
     .project-gallery .project-card {
         width: 100%;
+    }
+
+    .contact-section {
+        padding-top: 10px;
+        align-items: flex-start;
+    }
+
+    .hero {
+        justify-content: center;
     }
 }
