@@ -236,21 +236,12 @@ h5 {
 and width to 100% as the screen size shrinks */
 @media (max-width: 750px) {
 
-
-
     .contact-section,
     .profile,
     header,
     main,
     .project-gallery {
         flex-direction: column;
-    }
-
-
-    nav a,
-    .contact-section a {
-        margin-bottom: 13px;
-        margin-top: 13px;
     }
 
     main {
@@ -293,9 +284,5 @@ and width to 100% as the screen size shrinks */
 
     .hero {
         justify-content: center;
-        align-items: center;
     }
-
-
-
 }
