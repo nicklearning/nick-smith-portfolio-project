@@ -1,10 +1,11 @@
+/* defines CSS property variables */
 :root {
     --navy: rgba(1, 13, 105);
     --common-border-radius: 20px;
     --common-box-shadow: 10px 5px 5px rgb(113, 112, 112);
 }
 
-
+/* Set box-sizing: border-box on all elements sp that padding and border are included in the width and height calculation  */
 * {
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -47,7 +48,7 @@ header {
     border-radius: 100px;
 }
 
-
+/* Define the nav as a flex container */
 nav {
     display: flex;
     justify-content: center;
@@ -55,6 +56,7 @@ nav {
     padding: 0 20px 0 20px;
 }
 
+/* increase the gap between the text and the underline and increase the font size */
 nav a {
     font-size: 1.5rem;
     margin: 0 20px;
@@ -65,11 +67,13 @@ nav a {
     padding-bottom: 1px;
 }
 
+/* Hover effect on the anchor tag */
 nav a:hover {
     background-color: white;
     color: var(--navy);
 }
 
+/* background image underneath the header. It is display flex to help with alignment of the contained h3. */
 .hero {
     display: flex;
     background-color: rgb(42, 99, 165);
@@ -79,6 +83,7 @@ nav a:hover {
 
 }
 
+/* styling the h3 */
 .hero h3 {
     background-color: var(--navy);
     color: white;
@@ -88,6 +93,7 @@ nav a:hover {
     align-self: flex-end;
 }
 
+/* define the main container as a flex container. this container holds the .left-side section and the .right-side section. */
 main {
     display: flex;
     margin-right: 30px;
@@ -97,18 +103,21 @@ main {
 
 }
 
+/* set the width of the left side section to 30% of the screen width */
 .left-side {
     width: 30%;
     margin-top: 100px;
     text-align: right;
 }
 
+/* style left side h2's */
 .left-side h2 {
     color: var(--navy);
     font-size: 3rem;
     padding-right: 30px;
 }
 
+/* set the right side width to 70% of the screen width */
 .right-side {
     width: 70%;
     margin-top: 100px;
@@ -120,24 +129,25 @@ main {
     font-size: 1.5rem;
 }
 
-
+/* image container to contain all of the project thumbnails. flex container to help with the layout */
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+/* set the position to be relative to put the text on top of the image */
 .project-card-1 {
     position: relative;
 }
 
-
-
+/* make the first project thumbnail twice the size of the other ones */
 #first-project-img {
     width: 100%;
     height: auto;
 }
 
+/* position the project card title and subtitle on the image with absolute. Use viewport width units for responsiveness */
 .project-card1-text {
     position: absolute;
     top: 59%;
@@ -148,26 +158,25 @@ main {
     border-bottom-right-radius: var(--common-border-radius);
 }
 
+/* Use viewport width units for responsiveness */
 .project-card1-text h4,
 h5 {
     font-size: 1.22vw;
 }
 
+/* set the position to be relative to put the text on top of the image */
 .project-card {
     position: relative;
     width: 49%;
     margin: 5px 0px;
 }
 
-.project-card:hover,
-#first-project-img:hover {
-    box-shadow: var(--common-box-shadow)
-}
-
+/* make the img take up 100% the width of its parent */
 .project-card img {
     width: 100%;
 }
 
+/* position the project card title and subtitle on the image with absolute. Use viewport width units for responsiveness */
 .project-text {
     position: absolute;
     top: 59%;
@@ -178,11 +187,19 @@ h5 {
     border-bottom-right-radius: var(--common-border-radius);
 }
 
+/* Use viewport width units for responsiveness */
 .project-text h4,
 h5 {
     font-size: 1.22vw;
 }
 
+/* project card hover effect */
+.project-card:hover,
+#first-project-img:hover {
+    box-shadow: var(--common-box-shadow)
+}
+
+/* set the contact section as a flex container to help with the layout */
 .contact-section {
     display: flex;
     justify-content: space-evenly;
@@ -192,6 +209,7 @@ h5 {
 
 }
 
+/* style the contact section links */
 .contact-section a {
     color: var(--navy);
     font-weight: 900;
@@ -200,6 +218,7 @@ h5 {
     padding-bottom: 1px;
 }
 
+/* hover effect for the contact section links */
 .contact-section a:hover {
     color: white;
     font-weight: 900;
@@ -208,7 +227,8 @@ h5 {
 }
 
 
-
+/* Integrate responsiveness by using media queries. Set the flex direction to column 
+and width to 100% as the screen size shrinks */
 @media (max-width: 750px) {
 
     .contact-section,
