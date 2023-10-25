@@ -3,6 +3,11 @@
     --navy: rgba(1, 13, 105);
     --common-border-radius: 20px;
     --common-box-shadow: 10px 5px 5px rgb(113, 112, 112);
+    --project-card-text-size: 1.22vw;
+    --project-card-text-top-position: 59%;
+    --project-card-text-left-position: .25vw;
+    --underline-thickness: .2rem;
+    --underline-gap: .6rem;
 }
 
 /* Set box-sizing: border-box on all elements sp that padding and border are included in the width and height calculation  */
@@ -62,8 +67,8 @@ nav a {
     margin: 0 20px;
     color: white;
     font-weight: 500;
-    text-decoration-thickness: .2rem;
-    text-underline-offset: .6rem;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-gap);
     padding-bottom: 1px;
 }
 
@@ -73,13 +78,14 @@ nav a:hover {
     color: var(--navy);
 }
 
-/* background image underneath the header. It is display flex to help with alignment of the contained h3. */
+/* background image underneath the header. It is display flex to help with alignment of the h3. */
 .hero {
     display: flex;
+    justify-content: flex-end;
     background-color: rgb(42, 99, 165);
     background-image: url(/assets/images/background-3);
     padding: 50px 0px 10px;
-    justify-content: flex-end;
+
 
 }
 
@@ -150,8 +156,8 @@ main {
 /* position the project card title and subtitle on the image with absolute. Use viewport width units for responsiveness */
 .project-card1-text {
     position: absolute;
-    top: 59%;
-    left: .25vw;
+    top: var(--project-card-text-top-position);
+    left: var(--project-card-text-left-position);
     color: #fff;
     background-color: var(--navy);
     border-top-right-radius: var(--common-border-radius);
@@ -161,7 +167,7 @@ main {
 /* Use viewport width units for responsiveness */
 .project-card1-text h4,
 h5 {
-    font-size: 1.22vw;
+    font-size: var(--project-card-text-size);
 }
 
 /* set the position to be relative to put the text on top of the image */
@@ -179,8 +185,8 @@ h5 {
 /* position the project card title and subtitle on the image with absolute. Use viewport width units for responsiveness */
 .project-text {
     position: absolute;
-    top: 59%;
-    left: .25vw;
+    top: var(--project-card-text-top-position);
+    left: var(--project-card-text-left-position);
     color: #fff;
     background-color: var(--navy);
     border-top-right-radius: var(--common-border-radius);
@@ -190,7 +196,7 @@ h5 {
 /* Use viewport width units for responsiveness */
 .project-text h4,
 h5 {
-    font-size: 1.22vw;
+    font-size: var(--project-card-text-size);
 }
 
 /* project card hover effect */
@@ -213,15 +219,14 @@ h5 {
 .contact-section a {
     color: var(--navy);
     font-weight: 900;
-    text-decoration-thickness: .2rem;
-    text-underline-offset: .6rem;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-gap);
     padding-bottom: 1px;
 }
 
 /* hover effect for the contact section links */
 .contact-section a:hover {
     color: white;
-    font-weight: 900;
     background-color: var(--navy);
     box-shadow: var(--common-box-shadow)
 }
