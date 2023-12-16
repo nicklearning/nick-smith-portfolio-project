@@ -160,8 +160,9 @@ main {
     left: var(--project-card-text-left-position);
     color: #fff;
     background-color: var(--navy);
-    border-top-right-radius: var(--common-border-radius);
-    border-bottom-right-radius: var(--common-border-radius);
+    padding: 0 2%;
+    /* border-top-right-radius: var(--common-border-radius);
+    border-bottom-right-radius: var(--common-border-radius); */
 }
 
 /* Use viewport width units for responsiveness */
@@ -189,8 +190,9 @@ h5 {
     left: var(--project-card-text-left-position);
     color: #fff;
     background-color: var(--navy);
-    border-top-right-radius: var(--common-border-radius);
-    border-bottom-right-radius: var(--common-border-radius);
+    /* border-top-right-radius: var(--common-border-radius);
+    border-bottom-right-radius: var(--common-border-radius); */
+    padding: 0 2%;
 }
 
 /* Use viewport width units for responsiveness */
