@@ -183,6 +183,10 @@ h5 {
     width: 100%;
 }
 
+.hero h3 {
+    margin-right: 10px;
+}
+
 /* position the project card title and subtitle on the image with absolute. Use viewport width units for responsiveness */
 .project-text {
     position: absolute;
@@ -231,6 +235,10 @@ h5 {
     color: white;
     background-color: var(--navy);
     box-shadow: var(--common-box-shadow)
+}
+
+a {
+    cursor: pointer;
 }
 
 
